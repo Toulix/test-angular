@@ -1,0 +1,24 @@
+<div style="background: #ececec; padding: 30px">
+  <p>Détails de l'équipe selectionné</p>
+  <br />
+
+  <div *ngIf="userDetails$ | async as user">
+    <h2>{{ user.username }}</h2>
+    <img [src]="user.photo" [alt]="user.username" width="200" height="200" />
+    <ul>
+      <ng-container
+        *ngIf="user.missions && user.missions.length > 0; else noMissions"
+      >
+        <li *ngFor="let mission of user.missions">
+          <h3 [ngStyle]="{ color: mission.color }">{{ mission.title }}</h3>
+          <p>{{ mission.description }}</p>
+          <p>{{ mission.mission }}</p>
+          <p>{{ mission.missionDate | date : "medium" }}</p>
+        </li>
+      </ng-container>
+      <ng-template #noMissions>
+        <li class="mission">{{ user.username }} n'a pas de mission en cours</li>
+      </ng-template>
+    </ul>
+  </div>
+</div>
