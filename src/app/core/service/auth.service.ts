@@ -23,4 +23,10 @@ export class AuthService {
     };
     localStorage.setItem('user', JSON.stringify(userData));
   }
+
+  //Get user information from local storage
+  getUserInfoFromLocalStorage() {
+    const userData = localStorage.getItem('user');
+    return JSON.parse(userData as string);
+  }
 }
