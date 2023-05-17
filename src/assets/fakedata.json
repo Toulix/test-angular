@@ -1,0 +1,102 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "john_doe",
+      "photo": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/721.jpg",
+      "missions": [
+        {
+          "id": 1,
+          "title": "Mission 1",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "mission": "Mission details for user John Doe",
+          "color": "red",
+          "missionDate": "2023-05-15T00:00:00"
+        },
+        {
+          "id": 2,
+          "title": "Mission 2",
+          "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "mission": "Another mission for user John Doe",
+          "color": "green",
+          "missionDate": "2023-05-18T00:00:00"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "username": "jane_smith",
+      "photo": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/173.jpg",
+      "missions": [
+        {
+          "id": 3,
+          "title": "Mission 1",
+          "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "mission": "Mission details for user Jane Smith",
+          "color": "#A52A2A",
+          "missionDate": "2023-05-16T00:00:00"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "username": "alex_wilson",
+      "photo": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/444.jpg",
+      "missions": []
+    },
+    {
+      "id": 4,
+      "username": "emma_johnson",
+      "photo": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/598.jpg",
+      "missions": [
+        {
+          "id": 4,
+          "title": "Mission 1",
+          "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "mission": "Mission details for user Emma Johnson",
+          "color": "red",
+          "missionDate": "2023-05-19T00:00:00"
+        },
+        {
+          "id": 5,
+          "title": "Mission 2",
+          "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "mission": "Another mission for user Emma Johnson",
+          "color": "green",
+          "missionDate": "2023-05-20T00:00:00"
+        },
+        {
+          "id": 6,
+          "title": "Mission 3",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "mission": "Additional mission for user Emma Johnson",
+          "color": "#A52A2A",
+          "missionDate": "2023-05-21T00:00:00"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "username": "michael_brown",
+      "photo": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/341.jpg",
+      "missions": [
+        {
+          "id": 7,
+          "title": "Mission 1",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "mission": "Mission details for user Michael Brown",
+          "color": "red",
+          "missionDate": "2023-05-22T00:00:00"
+        },
+        {
+          "id": 8,
+          "title": "Mission 2",
+          "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+          "mission": "Another mission for user Michael Brown",
+          "color": "green",
+          "missionDate": "2023-05-23T00:00:00"
+        }
+      ]
+    }
+  ]
+}
