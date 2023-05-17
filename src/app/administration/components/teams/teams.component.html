@@ -1,4 +1,21 @@
 <div style="background: #ececec; padding: 30px">
   <p>Listes des équipes</p>
   <br />
+
+  <nz-list nzItemLayout="horizontal">
+    <nz-list-item *ngFor="let user of users">
+      <nz-list-item-meta
+        [nzAvatar]="user.photo"
+        [nzDescription]="user.username"
+      >
+        <nz-list-item-meta-title>
+          <a (click)="goToDetail(user.id)">
+            Nombre de mission:
+            {{ user.missions.length }}</a
+          >
+        </nz-list-item-meta-title>
+      </nz-list-item-meta>
+    </nz-list-item>
+    <nz-list-empty *ngIf="users.length === 0">No data available</nz-list-empty>
+  </nz-list>
 </div>

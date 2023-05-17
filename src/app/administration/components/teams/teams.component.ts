@@ -1,5 +1,7 @@
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+
+import { UsersService } from '../../service/data.service';
 
 @Component({
   selector: 'teams',
@@ -7,11 +9,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./teams.component.scss'],
 })
 export class TeamsComponent implements OnInit {
-  currentRoute!: string;
+  users: any;
 
-  constructor(public activatedRoute: ActivatedRoute) {}
+  constructor(
+    public activatedRoute: ActivatedRoute,
+    private router: Router,
+    private userService: UsersService
+  ) {}
 
   ngOnInit(): void {
-    this.currentRoute = this.activatedRoute?.snapshot?.url[0]?.path;
+    this.userService.getUsers().subscribe((data) => {
+      this.users = data;
+    });
+  }
+
+  goToDetail(id: string) {
+    this.router.navigate(['administration/teams', id]);
   }
 }
