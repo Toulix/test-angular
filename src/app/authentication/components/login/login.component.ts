@@ -34,17 +34,17 @@ export class LoginComponent implements OnInit {
   }
 
   submitForm(): void {
-    // if (this.loginForm.valid) {
-    //   const { username, password } = this.loginForm.value;
-    //   this.authService.login({ username, password });
-    //   this.router.navigate(['/administration/home']);
-    // } else {
-    //   Object.values(this.loginForm.controls).forEach((control) => {
-    //     if (control.invalid) {
-    //       control.markAsDirty();
-    //       control.updateValueAndValidity({ onlySelf: true });
-    //     }
-    //   });
-    // }
+    if (this.loginForm.valid) {
+      const { username, password } = this.loginForm.value;
+      this.authService.login({ username, password });
+      this.router.navigate(['/administration/home']);
+    } else {
+      Object.values(this.loginForm.controls).forEach((control) => {
+        if (control.invalid) {
+          control.markAsDirty();
+          control.updateValueAndValidity({ onlySelf: true });
+        }
+      });
+    }
   }
 }
