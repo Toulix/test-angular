@@ -10,9 +10,9 @@ import { User } from '../../models/user';
 export class AuthService {
   constructor(private route: Router) {}
 
-  login(userCredentials: User) {
+  login(userCredentials: { username: string; password: string }) {
     // send http request to verify credentials... (should return back a token)
-    const { username, password } = userCredentials;
+    const { username } = userCredentials;
     // http resquest...
 
     // test@gmail.com is a dummy email address since we don't have an api for now
