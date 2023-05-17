@@ -5,7 +5,7 @@
   (ngSubmit)="submitForm()"
 >
   <nz-form-item>
-    <nz-form-control nzHasFeedback nzErrorTip="Please input your username!">
+    <nz-form-control nzHasFeedback nzErrorTip="Nom d'utilisateur requis !">
       <nz-input-group nzPrefixIcon="user">
         <input
           type="text"
@@ -29,13 +29,13 @@
         />
         <ng-template #passwordErrorTpl let-control>
           <ng-container *ngIf="control.hasError('required')"
-            >Password required!!! <br
+            >Mot de passe requis !!! <br
           /></ng-container>
           <ng-container *ngIf="control.hasError('minlength')"
-            >Mimimum 4 characters <br />
+            >Mimimum 4 caractères <br />
           </ng-container>
           <ng-container *ngIf="control.hasError('pattern')"
-            >Wrong password <br />
+            >Mauvais mot de passe <br />
           </ng-container>
         </ng-template>
       </nz-input-group>
@@ -44,7 +44,7 @@
   <div nz-row class="login-form-margin">
     <div nz-col [nzSpan]="12"></div>
     <div nz-col [nzSpan]="12">
-      <a class="login-form-forgot">Forgot password ?</a>
+      <a class="login-form-forgot">J'ai oublié mon mot de passe ?</a>
     </div>
   </div>
   <button
@@ -53,6 +53,6 @@
     [nzType]="'primary'"
     [disabled]="!loginForm.valid"
   >
-    Submit
+    Se connecter
   </button>
 </form>
