@@ -69,7 +69,14 @@ import { NzResizableModule } from 'ng-zorro-antd/resizable';
 import { NzPipesModule } from 'ng-zorro-antd/pipes';
 import { NzSpaceModule } from 'ng-zorro-antd/space';
 
+import { IconDefinition } from '@ant-design/icons-angular';
+
+import { UserOutline, LockOutline } from '@ant-design/icons-angular/icons';
+
+const icons: IconDefinition[] = [UserOutline, LockOutline];
+
 @NgModule({
+  imports: [NzIconModule.forRoot(icons)],
   exports: [
     NzAffixModule,
     NzAlertModule,
