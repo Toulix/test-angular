@@ -1,4 +1,8 @@
+import { Mission } from './mission';
+
 export interface User {
-  username: string;
-  password: string;
+  id?: number;
+  username?: string;
+  photo?: string;
+  missions?: Mission[];
 }
