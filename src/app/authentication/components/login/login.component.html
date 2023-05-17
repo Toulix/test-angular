@@ -5,13 +5,12 @@
   (ngSubmit)="submitForm()"
 >
   <nz-form-item>
-    <nz-form-control nzErrorTip="Please input your username!">
+    <nz-form-control nzHasFeedback nzErrorTip="Please input your username!">
       <nz-input-group nzPrefixIcon="user">
-        <span nz-icon [nzType]="'home'"></span>
         <input
           type="text"
           nz-input
-          formControlName="userName"
+          formControlName="username"
           placeholder="Username"
           autocomplete="false"
         />
@@ -19,7 +18,7 @@
     </nz-form-control>
   </nz-form-item>
   <nz-form-item>
-    <nz-form-control nzErrorTip="Please input your Password!">
+    <nz-form-control nzHasFeedback [nzErrorTip]="passwordErrorTpl">
       <nz-input-group nzPrefixIcon="lock">
         <input
           type="password"
@@ -28,6 +27,17 @@
           placeholder="Password"
           autocomplete="false"
         />
+        <ng-template #passwordErrorTpl let-control>
+          <ng-container *ngIf="control.hasError('required')"
+            >Password required!!! <br
+          /></ng-container>
+          <ng-container *ngIf="control.hasError('minlength')"
+            >Mimimum 4 characters <br />
+          </ng-container>
+          <ng-container *ngIf="control.hasError('pattern')"
+            >Wrong password <br />
+          </ng-container>
+        </ng-template>
       </nz-input-group>
     </nz-form-control>
   </nz-form-item>
